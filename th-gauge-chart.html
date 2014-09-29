@@ -177,9 +177,6 @@
           self.meter.selectAll("path.foreground")
               .attr('d', function(){return self.arc.endAngle(0)();});
 
-          self.meter.selectAll("text.label")
-            .text('');
-
           self.meter.selectAll(".needle")
               .attr('transform', "rotate("+self.scale(self.min)+")");
                     
