@@ -52,8 +52,9 @@
                 left: 20,
                 right: 20, 
                 label: 8
-              }, 
-              width = self.chartWidth, 
+              };
+              self.getComputedDims(self);
+              width = self.computedWidth, 
               height = width/2,
               pi = Math.PI,
               outerRadius = width*0.5,
