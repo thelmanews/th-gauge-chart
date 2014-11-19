@@ -11,13 +11,6 @@
           display: inline-block;
           position: relative;
         }
-        #chart {
-
-        }
-        #chart text.label {
-          /*font-size: 13px;*/
-          /*font-weight: 300;*/
-        }
 
         #data_errors {  
           display: none;
@@ -54,7 +47,7 @@
                 label: 8
               };
               self.getComputedDims(self);
-              width = self.computedWidth, 
+              width = self.computedWidth - margin.right - margin.left, 
               height = width/2,
               pi = Math.PI,
               outerRadius = width*0.5,
