@@ -53,11 +53,11 @@
               outerRadius = width*0.5,
               innerRadius = width*0.43,
               meterWidth = outerRadius - innerRadius,
-              numTicks = self.chartData[0].ticks;
+              numTicks = self.chartData[0].ticks || 5;
               
             self.value = self.chartData[0].value;
-            self.min = self.chartData[0].min;
-            self.max = self.chartData[0].max;
+            self.min = self.chartData[0].min || 0;
+            self.max = self.chartData[0].max || 100;
             self._prevProgress = self.min;
             self.scale = d3.scale.linear().domain([self.min,self.max]).range([-90, 90]);
             self.arcScale = d3.scale.linear().domain([self.min,self.max]).range([0, 1])
